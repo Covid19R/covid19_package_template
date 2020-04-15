@@ -217,6 +217,14 @@ tab in RStudio.
     making sure your repo settings are set to put up the website. Add
     the URL to your README and your github repo
 
+  - Take a look at setupcode.R in the preparing for release section.
+    We’ve included a number of checks for you to run to make sure the
+    code follows best practices, is well styled, and for you to check
+    against r-hub and other sources to make sure it works beyond just
+    your computer\! These will help you have a much better package that
+    is more likely to go through any release process faster -
+    particularly if you submit to CRAN\!
+
 ### Making your package a part of the Covid19R Project
 
 OK\! You’re there\! It works, and your build is more or less clean (at

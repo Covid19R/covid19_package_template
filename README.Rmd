@@ -99,6 +99,8 @@ We have provided two example tests using `testthat` which provide bare minimum c
 
 - Make a [pkgdown](https://pkgdown.r-lib.org/) site! This can be as simple as running `pkgdown::build_site()`, pushing the update, and making sure your repo settings are set to put up the website. Add the URL to your README and your github repo
 
+- Take a look at setupcode.R in the preparing for release section. We've included a number of checks for you to run to make sure the code follows best practices, is well styled, and for you to check against r-hub and other sources to make sure it works beyond just your computer! These will help you have a much better package that is more likely to go through any release process faster - particularly if you submit to CRAN!
+
 ### Making your package a part of the Covid19R Project
 
 OK! You're there! It works, and your build is more or less clean (at least, only notes). Close your issue about developing a new package and... [file a new issue to onboard this package](https://github.com/Covid19R/covid19R/issues) with the onboarding template! We'll take a look, test it out, and if it's ready, we'll add it in! Nice work! (and if it's not, we'll help you fix it)
