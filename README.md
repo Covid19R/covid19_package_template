@@ -16,6 +16,11 @@ So, you want to create an R data package for covid19 data? Great\!
     [usethis](https://usethis.r-lib.org/index.html) calls that you use
     to create the library in setupcode.R
 
+  - File [an issue to let us and others know what you are working
+    on](https://github.com/Covid19R/covid19R/issues) with the start a
+    new package template\! We want to support you, cheer you on, and
+    provide any help you need\!
+
   - Take the running list of what to do below and turn all of this into
     a github issue in your repo, replacing each `-` with a `- [ ]` in
     order to create a checklist for creation and release\! Also, that
@@ -130,11 +135,11 @@ of information.
     vocabulary. Nested locations are indicated by multiple location
     types being combined with a `_`
 
-  - location\_standardized - A standardized location code using a
-    national or international standard.  
+  - location\_code - A standardized location code using a national or
+    international standard.  
 
-  - location\_standardized\_type The type of standardized location code
-    being used according to the covid19R controlled vocabulary.  
+  - location\_code\_type The type of standardized location code being
+    used according to the covid19R controlled vocabulary.  
 
   - data\_type - the type of data in that given row.  
 
@@ -215,12 +220,11 @@ tab in RStudio.
 ### Making your package a part of the Covid19R Project
 
 OK\! You’re there\! It works, and your build is more or less clean (at
-least, only notes). Hopefully by this point you’ve [filed an issue to
-let us know this is coming](https://github.com/Covid19R/covid19R/issues)
-so we can provide support, encouragement, and thoughts. If not, file one
-now\! Either way, in your issue thread, tell us you think this data
-package is ready to be onboarded\! We’ll take a look, test it out, and
-if so, add it in and let you know. Nice work\!
+least, only notes). Close your issue about developing a new package and…
+[file a new issue to onboard this
+package](https://github.com/Covid19R/covid19R/issues) with the
+onboarding template\! We’ll take a look, test it out, and if it’s ready,
+we’ll add it in\! Nice work\! (and if it’s not, we’ll help you fix it)
 
 ### Submitting to CRAN
 
@@ -294,11 +298,11 @@ The data columns are as follows:
     Vocabulary](https://covid19r.github.io/documentation/standardized-vocabulary.html).
     Nested locations are indicated by multiple location types being
     combined with a `_`
-  - location\_standardized - A standardized location code using a
-    national or international standard. MORE HERE
-  - location\_standardized\_type The type of standardized location code
-    being used according to the covid19R controlled vocabulary. Here we
-    use `XXX`
+  - location\_code - A standardized location code using a national or
+    international standard. MORE HERE
+  - location\_code\_type The type of standardized location code being
+    used according to the covid19R controlled vocabulary. Here we use
+    `XXX`
   - data\_type - the type of data in that given row from the [Covid19R
     Controlled
     Vocabulary](https://covid19r.github.io/documentation/standardized-vocabulary.html).

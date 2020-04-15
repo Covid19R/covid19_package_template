@@ -22,6 +22,8 @@ So, you want to create an R data package for covid19 data? Great!
 - Use this package template to create your own github repo. You can create it under your own user account, or, contact us if you would like to start the repo in the covid19R organization by [filing an issue](https://github.com/Covid19R/covid19R/issues).
 
 - Keep a running documentation of [usethis](https://usethis.r-lib.org/index.html) calls that you use to create the library in setupcode.R 
+
+- File [an issue to let us and others know what you are working on](https://github.com/Covid19R/covid19R/issues) with the start a new package template! We want to support you, cheer you on, and provide any help you need!
   
 - Take the running list of what to do below and turn all of this into a github issue in your repo, replacing each `-` with a `- [ ]` in order to create a checklist for creation and release! Also, that way, you can use the actual readme portion of this file as your README.Rmd!
 
@@ -64,8 +66,8 @@ Broadly, this function should scrape data from a source, and then reformat it in
 * date - The date in YYYY-MM-DD form
 * location - The name of the location as provided by the data source. Nested locations are combined and separated by a `,`, and can be split by `tidyr::separate()`, if you wish.
 * location_type - The type of location using the covid19R controlled vocabulary. Nested locations are indicated by multiple location types being combined with a `_`
-* location_standardized - A standardized location code using a national or international standard.  
-* location_standardized_type The type of standardized location code being used according to the covid19R controlled vocabulary.  
+* location_code - A standardized location code using a national or international standard.  
+* location_code_type The type of standardized location code being used according to the covid19R controlled vocabulary.  
 * data_type - the type of data in that given row.  
 * value - number of cases of each data type
 
@@ -99,7 +101,7 @@ We have provided two example tests using `testthat` which provide bare minimum c
 
 ### Making your package a part of the Covid19R Project
 
-OK! You're there! It works, and your build is more or less clean (at least, only notes). Hopefully by this point you've [filed an issue to let  us know this is coming](https://github.com/Covid19R/covid19R/issues) so we can provide support, encouragement, and thoughts. If not, file one now! Either way, in your issue thread, tell us you think this data package is ready to be onboarded! We'll take a look, test it out, and if so, add it in and let you know. Nice work!
+OK! You're there! It works, and your build is more or less clean (at least, only notes). Close your issue about developing a new package and... [file a new issue to onboard this package](https://github.com/Covid19R/covid19R/issues) with the onboarding template! We'll take a look, test it out, and if it's ready, we'll add it in! Nice work! (and if it's not, we'll help you fix it)
 
 ### Submitting to CRAN
 - Use RStudio to build check your package until there are no errors, warnings, or notes, even! Run the suite of devtools checks provided in setupcode.R. If you pass everything, use devtools to submit (it's in the setupcode), as it will ask you additional questions.
@@ -157,8 +159,8 @@ The data follows the [covid19R standard for tidy Covid-19 data](https://covid19r
 * date - The date in YYYY-MM-DD form
 * location - The name of the location as provided by the data source. Nested locations are combined and separated by a `,`, and can be split by `tidyr::separate()`, if you wish.
 * location_type - The type of location using the [Covid19R Controlled Vocabulary](https://covid19r.github.io/documentation/standardized-vocabulary.html). Nested locations are indicated by multiple location types being combined with a `_`
-* location_standardized - A standardized location code using a national or international standard. MORE HERE
-* location_standardized_type The type of standardized location code being used according to the covid19R controlled vocabulary. Here we use `XXX`
+* location_code - A standardized location code using a national or international standard. MORE HERE
+* location_code_type The type of standardized location code being used according to the covid19R controlled vocabulary. Here we use `XXX`
 * data_type - the type of data in that given row from the [Covid19R Controlled Vocabulary](https://covid19r.github.io/documentation/standardized-vocabulary.html). What is here?
 * value - number of cases of each data type
 * OTHER COLUMNS - WHAT THEY MEAN
