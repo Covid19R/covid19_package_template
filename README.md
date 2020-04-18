@@ -7,6 +7,13 @@ So, you want to create an R data package for covid19 data? Great\!
 
 ### Before your start:
 
+  - Choose a dataset\! We’d advise just going with one for simplicity -
+    particularly if this is your first time. If you’re interested in
+    contributing, but don’t know where to start, we’re trying to keep
+    track of data sources
+    [here](https://github.com/Covid19R/covid19R/issues/1). Please feel
+    free to add more sources here as well, if you know of some\!
+
   - Use this package template to create your own github repo. You can
     create it under your own user account, or, contact us if you would
     like to start the repo in the covid19R organization by [filing an
@@ -26,6 +33,41 @@ So, you want to create an R data package for covid19 data? Great\!
     order to create a checklist for creation and release\! Also, that
     way, you can use the actual readme portion of this file as your
     README.Rmd\!
+
+### How should I divide the data?
+
+You might be interested in making a package that brings in multiple
+different data sets for a given area. Or, the data source you’re
+accessing contains multiple different types of data, or data at
+different levels of spatial organization. Should you deploy these as one
+big long data set or multiple data sets.
+
+There can be different reasons for taking either path. In general, we
+advise you to think about, how will an end-user use a single data set?
+Assume that they have minimal information about your dataset initially
+(I mean, hopefully they won’t, but nuanced dataset details can be
+difficult to grasp at first), but want to create a clean, clear,
+accurate analysis or visualization. For example, the NY Times reports
+both state and county level data and multiple data types. In
+[covid19nytimes](https://github.com/Covid19R/covid19nytimes), we deploy
+one state-level datas et and one county-level data set. This minimizes
+confusion and possible mistakes (summing county-level data = state level
+data, and if both were in one data set, mistakes could be made in
+over-aggregating and getting 2X the number of cases). Within each data
+set, however, multiple data types are reported, as they can be filtered
+or shown together, even.
+
+Other data sets will provide some more complexity. In the [JHU
+data](https://github.com/Covid19R/coronavirus), for example, information
+for some countries is reported at the Province level, and for some
+countries, it’s at the country level. However, it’s **one** global
+dataset, and so the whole set is returned together. However, the
+`location_type` column clearly shows what is aggregated, what is not,
+and using a simple `tidyr::separate()` country and province-level data
+can be split for easier aggregation and display.
+
+In essence, how the raw data is structured will inform you how to split
+or not split the final tidy data.
 
 ### Packages to use
 
@@ -99,7 +141,7 @@ will make it easier for end-users to search through information about
 all datasets and find yours\! If you have new types you need to add to
 our controlled vocabulary, [file an
 issue](https://github.com/Covid19R/covid19R/issues) with the appropriate
-template, and we’ll add it\!
+template, and we’ll add it\! We want to bring in all types of data\!
 
 Remember, each dataset that your package provides needs one complete set
 of information.
